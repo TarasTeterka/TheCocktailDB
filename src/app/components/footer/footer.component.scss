@@ -1,0 +1,27 @@
+#footer{
+    margin: -90px 0 0 0;
+    height: 90px;
+    font-size: 14px;
+    color: white;
+    background-color: #1D000D;
+    background-size: cover;
+    padding-top: 30px;
+    .footerWrapper{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .footerImageLogo{
+            cursor: pointer;
+        }
+        .footerNav{
+            width: 250px;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        .footerNav span:hover{
+            color: #a78d9b;
+        }
+    }
+}
+
