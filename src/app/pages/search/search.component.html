@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="center input">
+      <h3 class="text-white center">Please search</h3>
+      <br />
+      <form>
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            name="title"
+            [(ngModel)]="search"
+            class="form-control"
+            placeholder="Name drinks"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+          <div class="input-group-append">
+            <button
+              (click)="searchCoctail()"
+              class="btn btn-outline-secondary bg-primary text-white"
+              type="button"
+              id="button-addon2"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- <br /> -->
+    <hr class="bg-white" />
+    <br />
+    <!-- <h4 *ngIf="list !== null && list !== undefined" class="text-white center"> -->
+    <h4 *ngIf="list.length !== 0" class="text-white center">
+      Done: {{ list.length }} coctails
+    </h4>
+    <br />
+    <div class="d-flex flex-wrap justify-content-center">
+        <app-coctail-item *ngFor="let item of list" [listCoctail]="item"></app-coctail-item>
+      <div *ngIf="errors === true" class="center">
+        <h3 class="text-danger">So same mistake!!!</h3>
+        <h3 class="text-danger">Please repit</h3>
+      </div>
+    </div>
+  </div>
+  
