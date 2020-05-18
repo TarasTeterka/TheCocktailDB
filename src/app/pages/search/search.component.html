@@ -1,7 +1,24 @@
 <div class="container">
     <div class="center input">
-      <h3 class="text-white center">Please search</h3>
-      <br />
+      <h3 class="text-white center">Search Drinks</h3>
+  
+      <form class="row align-items-center col-11">
+        <div class="input-group mb3">
+          <input class="form-control" name="search" placeholder="Search for a Cocktail" type="text" autocomplete="off"
+        [(ngModel)]="search" />
+        <div class="input-group-append">
+        <button
+        (click)="searchCoctail()" type="button" class="btn btn-outline-secondary mb-2">Search</button>
+      </div>
+        </div>
+      </form>
+
+
+
+
+
+
+<!-- 
       <form>
         <div class="input-group mb-3">
           <input
@@ -9,36 +26,31 @@
             name="title"
             [(ngModel)]="search"
             class="form-control"
-            placeholder="Name drinks"
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
+            placeholder="Search for a Cocktail"
           />
           <div class="input-group-append">
             <button
               (click)="searchCoctail()"
               class="btn btn-outline-secondary bg-primary text-white"
               type="button"
-              id="button-addon2"
-            >
+              id="button-addon2">
               Search
             </button>
           </div>
         </div>
-      </form>
+      </form> -->
     </div>
-    <!-- <br /> -->
-    <hr class="bg-white" />
+ 
     <br />
-    <!-- <h4 *ngIf="list !== null && list !== undefined" class="text-white center"> -->
-    <h4 *ngIf="list.length !== 0" class="text-white center">
-      Done: {{ list.length }} coctails
+    <h4 *ngIf="list.length !== 0" class="text-black center">
+      Found: {{ list.length }} coctails
     </h4>
     <br />
     <div class="d-flex flex-wrap justify-content-center">
         <app-coctail-item *ngFor="let item of list" [listCoctail]="item"></app-coctail-item>
       <div *ngIf="errors === true" class="center">
-        <h3 class="text-danger">So same mistake!!!</h3>
-        <h3 class="text-danger">Please repit</h3>
+        <h3>0 results found for your search.
+          Please try another search term</h3>
       </div>
     </div>
   </div>

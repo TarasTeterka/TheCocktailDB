@@ -76,12 +76,23 @@
     <span>{{drinkList["strDrink"]}}fsafsfa</span> -->
  <!-- <div *ngFor="let item of drinkList[0]"
  >  -->
-    <div class="card" style="width: 14rem;">
+    <!-- <div class="card" style="width: 14rem;">
         <img src='{{drinkList["strDrinkThumb"]}}' class="card-img-top" alt="...">
         <div class="card-body">
           <p class="card-title">{{drinkList["strDrink"]}}</p>
         </div>
       </div>
+       -->
       
-      
-    <!-- </div> -->
+    
+
+ <div class="app-coctails">
+      <div routerLink="/coctail-info"  [fragment]="listCoctail['idDrink']">
+        <div class="card" style="width: 18rem;" >
+          <img src="{{ listCoctail['strDrinkThumb'] }}" alt="drink" class="card-img-top"/>
+          <h4 class="card-text text-center">{{ listCoctail["strDrink"] }}</h4>
+        </div>
+      </div>
+    </div> 
+
+    

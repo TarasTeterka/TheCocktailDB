@@ -1,7 +1,32 @@
 .app-main {
   width: 100%;
   min-height: 74vh;
-  background-color: #230312;
- 
+  // background-color: #230312;
+  background-color: #CCCCFF;
+  background-color: #FFF;
+
   background-size: cover;
+  .carousel{
+    width: 50%;
+    margin: 0 auto 30px;
+    border: 1px solid rgb(204, 192, 192);
+    slide{
+      height: 600px;
+      img{
+        height: 600px;
+      }
+    }
+    .img{
+      size: 100% 100%;
+    }
+    h3{
+      color: black;
+      cursor: pointer;
+    }
+    h3:hover{
+      color: rgb(36, 32, 32);
+      text-shadow: 1px 1px 3px #000;
+    }
+    
+  }
 }

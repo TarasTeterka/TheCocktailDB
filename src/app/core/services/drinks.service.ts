@@ -12,17 +12,19 @@ export class DrinksService {
     return this.http.get<Cocktail>(`${this.url}random.php`);
   }
   getCoctail(id): any {
-    return this.http.get<Cocktail>(`${this.url}/${id}`);
+    return this.http.get(
+      `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
+    );
   }
+  // getCoctail(id): any {
+  //   return this.http.get<Cocktail>(`${this.url}/${id}`);
+  // }
   getSearch(search: string): any {
     return this.http.get(
       `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`
-      // `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`
     );
 }
 getRandom(): any {
-  // console.log(this.http.get(`${this.randomUrl}`));
-
   return this.http.get(`${this.url}random.php`);
 }
 }

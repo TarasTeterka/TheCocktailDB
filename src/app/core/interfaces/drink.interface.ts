@@ -18,6 +18,7 @@ export interface Cocktail{
     strIngredient7: string;
     strIngredient8: string;
     strIngredient9: string;
+    strIngredient10: string;
     strMeasure1: string;
     strMeasure2: string;
     strMeasure3: string;
@@ -27,6 +28,7 @@ export interface Cocktail{
     strMeasure7: string;
     strMeasure8: string;
     strMeasure9: string;
+    strMeasure10: string;
     strAlcoholic: string;
     strGlass: string;
     strDrinkThumb: string;

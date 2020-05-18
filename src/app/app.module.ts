@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
@@ -12,6 +14,10 @@ import { CoctailItemComponent } from './pages/coctail-item/coctail-item.componen
 import { AppRoutingModule } from './app-routing.module';
 import { SearchComponent } from './pages/search/search.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AboutUsComponent } from './pages/about/about-us/about-us.component';
+import { AboutAlcoDrinkComponent } from './pages/about/about-alco-drink/about-alco-drink.component';
+import { AboutNonAlcoDrinkComponent } from './pages/about/about-non-alco-drink/about-non-alco-drink.component';
+import { CoctailInfoComponent } from './pages/cocktail-info/coctail-info.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,14 +27,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CoctailsComponent,
     PageNotFoundComponent,
     CoctailItemComponent,
-    SearchComponent
+    SearchComponent,
+    AboutUsComponent,
+    AboutAlcoDrinkComponent,
+    AboutNonAlcoDrinkComponent,
+    CoctailInfoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

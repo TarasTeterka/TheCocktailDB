@@ -1,21 +1,45 @@
 <main class="app-main">
 
-    <h3>Random Drinks</h3>
+
 <!-- <app-coctails></app-coctails> -->
 
-<app-search></app-search>
 
 <br />
+<div  class="carousel">
+<carousel>
+    <slide>
+      <!-- <img src="https://grandkulinar.ru/uploads/posts/2018-11/1541254816_50-receptov-molochnyh-koktejlej.jpg" alt="first slide" style="display: block; width: 100%;"> -->
+      <img src="https://www.primedrink.ru/wp-content/uploads/2018/01/Koktejli-bezalkogolnye-v-bokalah.jpg" alt="first slide" style="display: block; width: 100%;">
+      <div class="carousel-caption d-none d-md-block">
+        <h3 routerLink="about-non-alco-drink">Read more about non-alcoholic cocktails</h3>
+        
+      </div>
+    </slide>
+    <slide>
+      <!-- <img src="https://previews.123rf.com/images/dml5050/dml50501509/dml5050150900046/45605185-popular-alcoholic-cocktails-drinks-yellow-margarita-cherry-blue-curacao-and-tropical-lemon-martini-o.jpg" alt="second slide" style="display: block; width: 100%;"> -->
+      <img src="https://shesaid.com/wp-content/uploads/2014/12/Calculating-the-alcohol-content-in-Cocktails.gif" alt="second slide" style="display: block; width: 100%;">
+      <div class="carousel-caption d-none d-md-block">
+        <h3 routerLink="about-alco-drink">Read more about alcoholic cocktails</h3>
+      </div>
+      
+    </slide>
+    <slide>
+      <img src="https://cdn.dribbble.com/users/52686/screenshots/5800136/artwork_2x.png" alt="third slide" style="display: block; width: 100%;">
+      <div class="carousel-caption d-none d-md-block">
+        <h3 routerLink="about-us">Read more about our team</h3>
+      </div>
+    </slide>
+  </carousel>
+</div>
+
+<h3 class="text-center">
+    Recommended drinks for you</h3>
 <div *ngIf="randomList" class="d-flex flex-wrap justify-content-around"> 
 <ul  class="d-flex flex-wrap"> </ul>
 
    <app-coctails *ngFor="let item of randomList" [listCoctail]="item">
   </app-coctails>
 </div>
-<app-coctails
-          *ngFor="let item of listForm"
-          [listCoctail]="item"
-          class="app-coctails"
-        >
-        </app-coctails> 
+
+
 </main>
