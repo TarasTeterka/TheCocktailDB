@@ -5,10 +5,10 @@ import { DrinksService } from 'src/app/core/services/drinks.service';
 
 @Component({
   selector: 'app-coctails',
-  templateUrl: './coctails.component.html',
-  styleUrls: ['./coctails.component.scss']
+  templateUrl: './cocktails.component.html',
+  styleUrls: ['./cocktails.component.scss']
 })
-export class CoctailsComponent implements OnInit {
+export class CocktailsComponent implements OnInit {
   drinkList: Array<Cocktails> = [];
   // drinkList: any;
   cocktail: Cocktail;

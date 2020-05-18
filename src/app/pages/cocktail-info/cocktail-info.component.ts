@@ -4,11 +4,11 @@ import { Cocktail } from 'src/app/core/interfaces/drink.interface';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-coctail-info',
-  templateUrl: './coctail-info.component.html',
-  styleUrls: ['./coctail-info.component.scss']
+  selector: 'app-cocktail-info',
+  templateUrl: './cocktail-info.component.html',
+  styleUrls: ['./cocktail-info.component.scss']
 })
-export class CoctailInfoComponent implements OnInit {
+export class CocktailInfoComponent implements OnInit {
   idDrink: number;
   // coctail: Cocktail;
   strDrink: string;

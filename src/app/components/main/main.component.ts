@@ -14,12 +14,10 @@ export class MainComponent implements OnInit {
   glass = false;
   public show = false;
   listglass: any = [];
-  // newToDoForm: FormGroup;
   list: any = [];
   value: any;
   randomList: any = [];
   listForm: any = [];
-  listGlas: any;
   constructor(
     private drinksService: DrinksService
   ) { }
@@ -28,15 +26,12 @@ export class MainComponent implements OnInit {
     this.randomDrinks();
   }
 
-
   randomDrinks() {
     for (let i = 0; i < 5; i++) {
       this.drinksService.getRandom().subscribe(
         (data) => {
           this.list = data.drinks[0];
-          // console.log(this.list);
           this.randomList.push(this.list);
-          console.log(this.randomList);
         },
         (error) => {}
       );

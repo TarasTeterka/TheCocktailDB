@@ -11,11 +11,11 @@ export class SearchComponent implements OnInit {
   constructor(private drinksService: DrinksService) { }
   list: any = [];
   search: string;
-  coctailList: any = [];
+  cocktailList: any = [];
   errors = false;
   ngOnInit(): void {
   }
-  searchCoctail() {
+  searchCocktail() {
     console.log(this.search);
     if (this.search === undefined) {
       this.search = null;

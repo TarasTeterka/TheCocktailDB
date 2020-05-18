@@ -1,0 +1,10 @@
+ <div class="app-coctails">
+      <div routerLink="/cocktail-info"  [fragment]="listCoctail['idDrink']">
+        <div class="card" style="width: 18rem;" >
+          <img src="{{ listCoctail['strDrinkThumb'] }}" alt="drink" class="card-img-top"/>
+          <h4 class="card-text text-center">{{ listCoctail["strDrink"] }}</h4>
+        </div>
+      </div>
+    </div> 
+
+    
