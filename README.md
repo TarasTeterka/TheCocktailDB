@@ -1,3 +1,5 @@
+Final project It Academy Logos.Angular CLI.You can open the site at this link: https://tarasteterka.github.io/TheCocktailDB/
+
 # TheCocktailDB
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
