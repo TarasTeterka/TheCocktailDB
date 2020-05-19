@@ -1,23 +1,58 @@
-.app-coctail-info{
-    // width: 100%;
-    // display: flex;
-    // justify-content: space-between;
+.app-cocktail-info {
     padding-top: 30px;
     margin-bottom: 15px;
 }
 
-.card-text{
-    img{
+.card-text {
+    img {
         width: 190px;
     }
 }
 
-.coctail-main-info{
+.cocktail-main-info {
     img {
         width: 380px;
+        margin: 10px 0 10px 0;
     }
 }
+
 .ingredient {
     width: 200px;
-    // height: 200px;
+}
+
+@media screen and (max-width: 767px) {
+    .app-cocktail-info {
+        padding-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .card-text {
+        img {
+            width: 100px;
+        }
+    }
+    
+    .cocktail-main-info {
+        img {
+            width: 200px;
+            margin: 10px 0 10px 0;
+        }
+    }
+    
+    .ingredient {
+        width: 100px;
+    }
+    
+    span{
+        font-size: 10px;
+    }
+    p{
+        font-size: 10px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    h4{
+        font-size: 16px;
+    }
 }

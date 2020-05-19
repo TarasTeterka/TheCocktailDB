@@ -12,7 +12,13 @@ import { CocktailInfoComponent } from './pages/cocktail-info/cocktail-info.compo
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: MainComponent },
+  { path: 'home', component: MainComponent,
+children: [
+  {path: '', redirectTo: 'home', pathMatch: 'full' },
+  {path: 'home/alcoholic-cocktails', component: MainComponent},
+  {path: 'home/non-alcoholic-cocktails', component: MainComponent},
+  {path: 'home/select-ingredients', component: MainComponent}
+] },
   { path: 'search', component: SearchComponent },
   { path: 'cocktails', component: CocktailsComponent },
   { path: 'cocktail-item', component: CocktailItemComponent },

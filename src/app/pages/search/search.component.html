@@ -1,29 +1,43 @@
+<div class="search-block">
 <div class="container">
-    <div class="center input">
-      <h3 class="text-white center">Search Drinks</h3>
-  
-      <form class="row align-items-center col-11">
-        <div class="input-group mb3">
-          <input class="form-control" name="search" placeholder="Search for a Cocktail" type="text" autocomplete="off"
-        [(ngModel)]="search" />
+  <div class="center input">
+    <h3 class="text-white center">Search Drinks</h3>
+
+    <form class="row align-items-center ">
+      <div class="input-group mb3">
+        <input
+          class="form-control"
+          name="search"
+          placeholder="Search for a Cocktail"
+          type="text"
+          autocomplete="off"
+          [(ngModel)]="search"
+        />
         <div class="input-group-append">
-        <button
-        (click)="searchCocktail()" type="button" class="btn btn-outline-secondary mb-2">Search</button>
-      </div>
+          <button
+            (click)="searchCocktail()"
+            type="button"
+            class="btn btn-outline-secondary mb-2"
+          >
+            Search
+          </button>
         </div>
-      </form>
-    </div>
- 
-    <h4 *ngIf="list.length !== 0" class="text-black center">
-      Found: {{ list.length }} cocktails
-    </h4>
-    <br />
-    <div class="d-flex flex-wrap justify-content-center">
-      <app-cocktail-item *ngFor="let item of list" [listCocktail]="item"></app-cocktail-item>
-      <div *ngIf="errors === true" class="center">
-        <h3>0 results found for your search.
-          Please try another search term</h3>
       </div>
+    </form>
+  </div>
+
+  <h4 *ngIf="list.length !== 0">
+    Found: {{ list.length }} cocktails
+  </h4>
+  <br />
+  <div class="d-flex flex-wrap justify-content-center app-search">
+    <app-cocktail-item
+      *ngFor="let item of list"
+      [listCocktail]="item"
+    ></app-cocktail-item>
+    <div *ngIf="errors === true">
+      <h3>0 results found for your search. Please try another search term</h3>
     </div>
   </div>
-  
+</div>
+</div>

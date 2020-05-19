@@ -27,4 +27,14 @@ export class DrinksService {
 getRandom(): any {
   return this.http.get(`${this.url}random.php`);
 }
+getalcohol(alcohol): any {
+  return this.http.get(
+    `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=${alcohol}`
+  );
+}
+getByingredient(ingredient): any {
+  return this.http.get(
+    `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`
+  );
+}
 }

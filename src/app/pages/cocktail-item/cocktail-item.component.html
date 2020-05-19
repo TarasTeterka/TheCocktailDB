@@ -1,10 +1,13 @@
- <div class="app-cocktail-item">
-    <div routerLink="/cocktail-info"  [fragment]="listCocktail['idDrink']">
-      <div class="card" style="width: 18rem;" >
-        <img src="{{ listCocktail['strDrinkThumb'] }}" alt="drink" class="card-img-top"/>
-        <h4 class="card-text text-center">{{ listCocktail["strDrink"] }}</h4>
-      </div>
+<div class="app-cocktail-item">
+  <div routerLink="/cocktail-info" [fragment]="listCocktail['idDrink']">
+    <div class="card">
+      <img
+        src="{{ listCocktail['strDrinkThumb'] }}"
+        alt="drink"
+        class="card-img-top"
+      />
+      <h4 class="card-text text-center">{{ listCocktail["strDrink"] }}</h4>
     </div>
-  </div> 
+  </div>
+</div>
 
-  

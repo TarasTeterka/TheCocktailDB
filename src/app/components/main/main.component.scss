@@ -1,30 +1,106 @@
 .app-main {
   width: 100%;
   min-height: 74vh;
-  background-color: #CCCCFF;
-  background-color: #FFF;
+  background-color: #fff;
   background-size: cover;
-  .carousel{
+
+  .carousel {
     width: 50%;
-    margin: 0 auto 30px;
+    margin: 30px auto 30px;
     border: 1px solid rgb(204, 192, 192);
-    slide{
+
+    slide {
       height: 600px;
-      img{
+
+      .img {
         height: 600px;
       }
     }
-    .img{
+
+    .img {
       size: 100% 100%;
     }
-    h3{
+
+    h3 {
       color: black;
       cursor: pointer;
     }
-    h3:hover{
+
+    h3:hover {
       color: rgb(36, 32, 32);
       text-shadow: 1px 1px 3px #000;
     }
-    
   }
+
+  .sorted-coctails {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .div-for-forms {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    margin: 50px auto;
+  }
+
+  .random-coctails {
+    width: 70%;
+    margin: 30px auto;
+  }
+
+  .select-ingredients{
+    background-color: #6C757D;
+    color:white;
+  }
+
+}
+  
+@media screen and (max-width: 768px) {
+    .app-main{
+
+    .carousel{
+    slide {
+      height: 350px;
+
+      .img {
+        height: 350px;
+      }
+    }
+  }
+  .sort-alcohol{
+    width: 150px;
+  }
+  .select-ingredients{
+    width: 190px;
+  }
+}  
+}
+
+
+@media screen and (max-width: 767px) {
+  .app-main{
+
+  .carousel{
+  slide {
+    height: 260px;
+
+    .img {
+      height: 260px;
+    }
+  }
+}
+h3{
+  font-size: 18px;
+}
+.sort-alcohol{
+  width: 130px;
+}
+.select-ingredients{
+  width: 90px;
+}
+}  
+h2{
+  font-size: 24px;
+}
 }

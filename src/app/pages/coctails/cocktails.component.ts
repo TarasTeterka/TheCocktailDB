@@ -4,7 +4,7 @@ import { DrinksService } from 'src/app/core/services/drinks.service';
 
 
 @Component({
-  selector: 'app-coctails',
+  selector: 'app-cocktails',
   templateUrl: './cocktails.component.html',
   styleUrls: ['./cocktails.component.scss']
 })

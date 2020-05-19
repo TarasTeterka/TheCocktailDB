@@ -1,49 +1,94 @@
 <main class="app-main">
+  <div class="carousel">
+    <carousel>
+      <slide>
+        <img class="img" src="https://www.primedrink.ru/wp-content/uploads/2018/01/Koktejli-bezalkogolnye-v-bokalah.jpg"
+          alt="first slide" style="display: block; width: 100%;" />
+        <div class="carousel-caption d-none d-md-block">
+          <h3 routerLink="about-non-alco-drink">
+            Read more about non-alcoholic cocktails
+          </h3>
+        </div>
+      </slide>
 
+      <slide>
+        <img class="img" src="https://shesaid.com/wp-content/uploads/2014/12/Calculating-the-alcohol-content-in-Cocktails.gif"
+          alt="second slide" style="display: block; width: 100%;" />
+        <div class="carousel-caption d-none d-md-block">
+          <h3 routerLink="about-alco-drink">
+            Read more about alcoholic cocktails
+          </h3>
+        </div>
+      </slide>
 
-<!-- <app-coctails></app-coctails> -->
+      <slide>
+        <img class="img" src="https://cdn.dribbble.com/users/52686/screenshots/5800136/artwork_2x.png" alt="third slide"
+          style="display: block; width: 100%;" />
+        <div class="carousel-caption d-none d-md-block">
+          <h3 routerLink="about-us">Read more about our team</h3>
+        </div>
+      </slide>
+    </carousel>
+  </div>
 
+  <hr>
 
-<br />
-<div  class="carousel">
-<carousel>
-    <slide>
-      <!-- <img src="https://grandkulinar.ru/uploads/posts/2018-11/1541254816_50-receptov-molochnyh-koktejlej.jpg" alt="first slide" style="display: block; width: 100%;"> -->
-      <img src="https://www.primedrink.ru/wp-content/uploads/2018/01/Koktejli-bezalkogolnye-v-bokalah.jpg" alt="first slide" style="display: block; width: 100%;">
-      <div class="carousel-caption d-none d-md-block">
-        <h3 routerLink="about-non-alco-drink">Read more about non-alcoholic cocktails</h3>
-        
+  <h3 class="text-center">
+    Recommended drinks for you
+  </h3>
+
+  <div *ngIf="randomList" class="d-flex flex-wrap justify-content-around random-coctails">
+    <app-cocktails *ngFor="let item of randomList" [listCoctail]="item">
+    </app-cocktails>
+  </div>
+
+  <hr>
+  
+  <h2 class="text-center">Sort cocktails</h2>
+  <div class="div-for-forms">
+    <form *ngIf="alcohol" (change)="formCoctailAlcohol($event.target.value)" class="d-flex flex-column">
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary sort-alcohol" routerLinkActive="active">
+          <input type="radio" value="Non_Alcoholic" name="options" id="option1"
+            routerLink="home/non-alcoholic-cocktails" />
+          Non-Alcoholic
+        </label>
+        <label class="btn btn-secondary sort-alcohol" routerLinkActive="active">
+          <input type="radio" value="Alcoholic" name="options" id="option2" routerLink="home/alcoholic-cocktails"/>
+          Alcoholic
+        </label>
       </div>
-    </slide>
-    <slide>
-      <!-- <img src="https://previews.123rf.com/images/dml5050/dml50501509/dml5050150900046/45605185-popular-alcoholic-cocktails-drinks-yellow-margarita-cherry-blue-curacao-and-tropical-lemon-martini-o.jpg" alt="second slide" style="display: block; width: 100%;"> -->
-      <img src="https://shesaid.com/wp-content/uploads/2014/12/Calculating-the-alcohol-content-in-Cocktails.gif" alt="second slide" style="display: block; width: 100%;">
-      <div class="carousel-caption d-none d-md-block">
-        <h3 routerLink="about-alco-drink">Read more about alcoholic cocktails</h3>
-      </div>
-      
-    </slide>
-    <slide>
-      <img src="https://cdn.dribbble.com/users/52686/screenshots/5800136/artwork_2x.png" alt="third slide" style="display: block; width: 100%;">
-      <div class="carousel-caption d-none d-md-block">
-        <h3 routerLink="about-us">Read more about our team</h3>
-      </div>
-    </slide>
-  </carousel>
-</div>
+    </form>
 
-<h3 class="text-center">
-    Recommended drinks for you</h3>
-<div *ngIf="randomList" class="d-flex flex-wrap justify-content-around"> 
-<ul  class="d-flex flex-wrap"> </ul>
+    <form #myForm="ngForm" *ngIf="ingredient" (change)="formCoctail($event.target.value)" class="d-flex flex-column">
+      <select class="custom-select col-md-12 select-ingredients" routerLink="home/select-ingredients">
+        <option selected>Select ingredients</option>
+        <option value="Brandy">Brandy</option>
+        <option value="Gin">Gin</option>
+        <option value="Amaretto">Amaretto</option>
+        <option value="Bourbon">Bourbon</option>
+        <option value="Scotch">Scotch</option>
+        <option value="Tequila">Tequila</option>
+        <option value="Vodka">Vodka</option>
+        <option value="Rum">Rum</option>
+        <option value="Ouzo">Ouzo</option>
+        <option value="Water">Water</option>
+        <option value="Blackberry brandy">Blackberry brandy</option>
+        <option value="Peppermint schnapps">Peppermint schnapps</option>
+        <option value="7-Up">7-Up</option>
+        <option value="Galliano">Galliano</option>
+      </select>
+    </form>
+  </div>
 
-   <app-coctails *ngFor="let item of randomList" [listCoctail]="item">
-  </app-coctails>
-</div>
-
-
-
-
-
+  <div class="sorted-coctails">
+    <h4 *ngIf="listForm.length !== 0" class="text-black center">
+      Found: {{ listForm.length }} coctails
+    </h4>
+    <div class="d-flex flex-wrap justify-content-around align-items-start align-self-start">
+      <app-cocktails *ngFor="let item of listForm" [listCoctail]="item" class="app-cocktails">
+      </app-cocktails>
+    </div>
+  </div>
 
 </main>

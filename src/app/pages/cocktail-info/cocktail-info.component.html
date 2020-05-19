@@ -1,83 +1,128 @@
 <div class="app-coctail-info">
-    <div *ngIf="list">
-        <div class="container">
-            <div class="d-flex">
-                <div class="coctail-main-info">
-                    <div>
-                        <h3>
-                            <span class="">{{ list["strDrink"] }}</span>
-                        </h3>
-                        <img src="{{ list['strDrinkThumb'] }}" alt="coctail" />
-                    </div>
-                    <h3>Instructions</h3>
-                    <p>{{ list.strInstructions }}</p>
-                </div>
-                <div>
-                    <div class="card-text">
-                        <div class="text-center">
-                            <h4>Ingredients</h4>
-                        </div>
-                        <div class="d-flex flex-wrap justify-content-around">
-                            <div class="text-center ingredient">
-                                <img src="https://www.thecocktaildb.com/images/ingredients/{{
-                            list?.strIngredient1
-                          }}-Medium.png" alt="Ingredient" />
-                                <span>{{ list.strIngredient1 }}</span>
-                                <span> ({{ list.strMeasure1 }})</span>
-                            </div>
-                            <div *ngIf="list.strIngredient2 !== null" class="text-center ingredient">
-                                <img src="https://www.thecocktaildb.com/images/ingredients/{{
-                            list?.strIngredient2
-                          }}-Medium.png" alt="Ingredient" />
-                                <span>{{ list?.strIngredient2 }}</span>
-                                <span> ({{list?.strMeasure2}})</span>
-                            </div>
-                            <div *ngIf="list.strIngredient3 !== null" class="text-center ingredient">
-                                <img src="https://www.thecocktaildb.com/images/ingredients/{{
-                            list.strIngredient3
-                          }}-Medium.png" alt="Ingredient" />
-                                <span>{{ list.strIngredient3 }}</span>
-                                <span> ({{ list?.strMeasure3 }})</span>
-                            </div>
-                            <div *ngIf="list.strIngredient4 !== null" class="text-center ingredient">
-                                <img src="https://www.thecocktaildb.com/images/ingredients/{{
-                            list.strIngredient4
-                          }}-Medium.png" alt="Ingredient" />
-                                <span>{{ list.strIngredient4 }}</span>
-                                <span> ({{ list?.strMeasure4 }})</span>
-                            </div>
-                            <div *ngIf="list.strIngredient5 !== null" class="text-center ingredient">
-                                <img src="https://www.thecocktaildb.com/images/ingredients/{{
-                            list.strIngredient5
-                          }}-Medium.png" alt="Ingredient" />
-                                <span>{{ list.strIngredient5 }}</span>
-                                <span> ({{ list?.strMeasure5 }})</span>
-                            </div>
-                            <div *ngIf="list.strIngredient6 !== null" class="text-center ingredient">
-                                <img src="https://www.thecocktaildb.com/images/ingredients/{{
-                            list.strIngredient6
-                          }}-Medium.png" alt="Ingredient" />
-                                <span>{{ list.strIngredient6 }}</span>
-                                <span> ({{ list?.strMeasure6 }})</span>
-                            </div>
-                            <div *ngIf="list.strIngredient7 !== null" class="text-center ingredient">
-                                <img src="https://www.thecocktaildb.com/images/ingredients/{{
-                            list.strIngredient7
-                          }}-Medium.png" alt="Ingredient" />
-                                <span>{{ list.strIngredient7 }}</span>
-                                <span> ({{ list?.strMeasure7 }})</span>
-                            </div>
-                            <div *ngIf="list.strIngredient8 !== null" class="text-center ingredient">
-                                <img src="https://www.thecocktaildb.com/images/ingredients/{{
-                            list.strIngredient8
-                          }}-Medium.png" alt="Ingredient" />
-                                <span>{{ list.strIngredient8 }}:</span>
-                                <span>({{ list?.strMeasure8 }})</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div *ngIf="list">
+    <div class="container">
+      <div class="d-flex">
+        <div class="cocktail-main-info">
+          <div>
+            <h3>
+              <span class="">{{ list["strDrink"] }}</span>
+            </h3>
+            <img src="{{ list['strDrinkThumb'] }}" alt="cocktail" />
+          </div>
+          <h3>Instructions</h3>
+          <p>{{ list.strInstructions }}</p>
         </div>
+        <div>
+          <div class="card-text">
+            <div class="text-center">
+              <h4>Ingredients</h4>
+            </div>
+            <div class="d-flex flex-wrap justify-content-around">
+              <div class="text-center ingredient">
+                <img
+                  src="https://www.thecocktaildb.com/images/ingredients/{{
+                    list?.strIngredient1
+                  }}-Medium.png"
+                  alt="Ingredient"
+                />
+                <span>{{ list.strIngredient1 }}</span>
+                <span> ({{ list.strMeasure1 }})</span>
+              </div>
+              <div
+                *ngIf="list.strIngredient2 !== null"
+                class="text-center ingredient"
+              >
+                <img
+                  src="https://www.thecocktaildb.com/images/ingredients/{{
+                    list?.strIngredient2
+                  }}-Medium.png"
+                  alt="Ingredient"
+                />
+                <span>{{ list?.strIngredient2 }}</span>
+                <span> ({{ list?.strMeasure2 }})</span>
+              </div>
+              <div
+                *ngIf="list.strIngredient3 !== null"
+                class="text-center ingredient"
+              >
+                <img
+                  src="https://www.thecocktaildb.com/images/ingredients/{{
+                    list.strIngredient3
+                  }}-Medium.png"
+                  alt="Ingredient"
+                />
+                <span>{{ list.strIngredient3 }}</span>
+                <span> ({{ list?.strMeasure3 }})</span>
+              </div>
+              <div
+                *ngIf="list.strIngredient4 !== null"
+                class="text-center ingredient"
+              >
+                <img
+                  src="https://www.thecocktaildb.com/images/ingredients/{{
+                    list.strIngredient4
+                  }}-Medium.png"
+                  alt="Ingredient"
+                />
+                <span>{{ list.strIngredient4 }}</span>
+                <span> ({{ list?.strMeasure4 }})</span>
+              </div>
+              <div
+                *ngIf="list.strIngredient5 !== null"
+                class="text-center ingredient"
+              >
+                <img
+                  src="https://www.thecocktaildb.com/images/ingredients/{{
+                    list.strIngredient5
+                  }}-Medium.png"
+                  alt="Ingredient"
+                />
+                <span>{{ list.strIngredient5 }}</span>
+                <span> ({{ list?.strMeasure5 }})</span>
+              </div>
+              <div
+                *ngIf="list.strIngredient6 !== null"
+                class="text-center ingredient"
+              >
+                <img
+                  src="https://www.thecocktaildb.com/images/ingredients/{{
+                    list.strIngredient6
+                  }}-Medium.png"
+                  alt="Ingredient"
+                />
+                <span>{{ list.strIngredient6 }}</span>
+                <span> ({{ list?.strMeasure6 }})</span>
+              </div>
+              <div
+                *ngIf="list.strIngredient7 !== null"
+                class="text-center ingredient"
+              >
+                <img
+                  src="https://www.thecocktaildb.com/images/ingredients/{{
+                    list.strIngredient7
+                  }}-Medium.png"
+                  alt="Ingredient"
+                />
+                <span>{{ list.strIngredient7 }}</span>
+                <span> ({{ list?.strMeasure7 }})</span>
+              </div>
+              <div
+                *ngIf="list.strIngredient8 !== null"
+                class="text-center ingredient"
+              >
+                <img
+                  src="https://www.thecocktaildb.com/images/ingredients/{{
+                    list.strIngredient8
+                  }}-Medium.png"
+                  alt="Ingredient"
+                />
+                <span>{{ list.strIngredient8 }}:</span>
+                <span>({{ list?.strMeasure8 }})</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
