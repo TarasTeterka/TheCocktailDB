@@ -1,11 +1,13 @@
 .app-cocktails {
     margin: 30px auto 30px;
     cursor: pointer;
-.card{
-    width: 12rem;
-    min-height: 240px;
-    box-shadow:  5px 3px rgb(224, 222, 222);
-}
+
+    .card {
+        width: 12rem;
+        min-height: 240px;
+        box-shadow: 5px 3px rgb(224, 222, 222);
+    }
+
     &:hover {
         opacity: 0.8;
     }

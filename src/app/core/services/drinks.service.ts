@@ -16,25 +16,23 @@ export class DrinksService {
       `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
     );
   }
-  // getCoctail(id): any {
-  //   return this.http.get<Cocktail>(`${this.url}/${id}`);
-  // }
+
   getSearch(search: string): any {
     return this.http.get(
       `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`
     );
-}
-getRandom(): any {
-  return this.http.get(`${this.url}random.php`);
-}
-getalcohol(alcohol): any {
-  return this.http.get(
-    `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=${alcohol}`
-  );
-}
-getByingredient(ingredient): any {
-  return this.http.get(
-    `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`
-  );
-}
+  }
+  getRandom(): any {
+    return this.http.get(`${this.url}random.php`);
+  }
+  getByAlcohol(alcohol): any {
+    return this.http.get(
+      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=${alcohol}`
+    );
+  }
+  getDrinksByingredient(ingredient): any {
+    return this.http.get(
+      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`
+    );
+  }
 }

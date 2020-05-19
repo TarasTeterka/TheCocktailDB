@@ -16,7 +16,6 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
   }
   searchCocktail() {
-    console.log(this.search);
     if (this.search === undefined) {
       this.search = null;
     }
@@ -24,22 +23,18 @@ export class SearchComponent implements OnInit {
       this.drinksService.getSearch(this.search).subscribe(
         (data) => {
           this.list = data.drinks;
-          console.log(this.list);
           this.errors = false;
 
           if (this.list === null) {
             this.list = [];
             this.errors = true;
           }
-          // this.coctailList.push(this.list);
-          // console.log(this.coctailList);
         },
-        (error) => {}
+        (error) => { }
       );
     } else {
       this.list = [];
       this.errors = true;
-      // console.log(this.list);
     }
   }
 }

@@ -46,7 +46,7 @@
   
   <h2 class="text-center">Sort cocktails</h2>
   <div class="div-for-forms">
-    <form *ngIf="alcohol" (change)="formCoctailAlcohol($event.target.value)" class="d-flex flex-column">
+    <form *ngIf="alcohol" (change)="sortByAlcohol($event.target.value)" class="d-flex flex-column">
       <div class="btn-group btn-group-toggle" data-toggle="buttons">
         <label class="btn btn-secondary sort-alcohol" routerLinkActive="active">
           <input type="radio" value="Non_Alcoholic" name="options" id="option1"
@@ -60,7 +60,7 @@
       </div>
     </form>
 
-    <form #myForm="ngForm" *ngIf="ingredient" (change)="formCoctail($event.target.value)" class="d-flex flex-column">
+    <form #myForm="ngForm" *ngIf="ingredient" (change)="sortByIngredient($event.target.value)" class="d-flex flex-column">
       <select class="custom-select col-md-12 select-ingredients" routerLink="home/select-ingredients">
         <option selected>Select ingredients</option>
         <option value="Brandy">Brandy</option>

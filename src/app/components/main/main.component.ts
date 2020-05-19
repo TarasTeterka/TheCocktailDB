@@ -11,9 +11,6 @@ import { DrinksService } from 'src/app/core/services/drinks.service';
 export class MainComponent implements OnInit {
   public alcohol = true;
   ingredient = true;
-  glass = false;
-  public show = false;
-  listglass: any = [];
   list: any = [];
   value: any;
   randomList: any = [];
@@ -37,46 +34,21 @@ export class MainComponent implements OnInit {
       );
     }
   }
-  // formCoctail(ingredient) {
-  //   this.drinksService.getByingredient(ingredient).subscribe(
-  //     (data) => {
-  //       this.listForm = data.drinks;
-  //       console.log(this.listForm);
-  //     },
-  //     (error) => {}
-  //   );
-  // }
-  // formCoctailAlcohol(alcohol) {
-  //   console.log(alcohol);
-  //   this.drinksService.getalcohol(alcohol).subscribe(
-  //     (data) => {
-  //       this.listForm = data.drinks;
 
-  //       console.log(this.listForm);
-  //     },
-  //     (error) => {}
-  //   );
-  // }
-
-
-  formCoctailAlcohol(alcohol) {
-    console.log(alcohol);
-    this.drinksService.getalcohol(alcohol).subscribe(
+  sortByAlcohol(alcohol) {
+    this.drinksService.getByAlcohol(alcohol).subscribe(
       (data) => {
         this.listForm = data.drinks;
-
-        console.log(this.listForm);
       },
       (error) => {}
     );
   }
 
 
-  formCoctail(ingredient) {
-    this.drinksService.getByingredient(ingredient).subscribe(
+  sortByIngredient(ingredient) {
+    this.drinksService.getDrinksByingredient(ingredient).subscribe(
       (data) => {
         this.listForm = data.drinks;
-        console.log(this.listForm);
       },
       (error) => {}
     );
