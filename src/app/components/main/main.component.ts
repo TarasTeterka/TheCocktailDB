@@ -35,15 +35,14 @@ export class MainComponent implements OnInit {
     }
   }
 
-  sortByAlcohol(alcohol) {
-    this.drinksService.getByAlcohol(alcohol).subscribe(
+  sortDrinksByAlcohol(alcohol) {
+    this.drinksService. getDrinkByAlcohol(alcohol).subscribe(
       (data) => {
         this.listForm = data.drinks;
       },
       (error) => {}
     );
   }
-
 
   sortByIngredient(ingredient) {
     this.drinksService.getDrinksByingredient(ingredient).subscribe(
@@ -53,8 +52,6 @@ export class MainComponent implements OnInit {
       (error) => {}
     );
   }
-
-
 }
 
 

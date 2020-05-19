@@ -46,7 +46,7 @@
   
   <h2 class="text-center">Sort cocktails</h2>
   <div class="div-for-forms">
-    <form *ngIf="alcohol" (change)="sortByAlcohol($event.target.value)" class="d-flex flex-column">
+    <form *ngIf="alcohol" (change)="sortDrinksByAlcohol($event.target.value)" class="d-flex flex-column">
       <div class="btn-group btn-group-toggle" data-toggle="buttons">
         <label class="btn btn-secondary sort-alcohol" routerLinkActive="active">
           <input type="radio" value="Non_Alcoholic" name="options" id="option1"

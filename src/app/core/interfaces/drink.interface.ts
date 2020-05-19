@@ -1,7 +1,3 @@
-// export interface DrinkObject {
-//     drinks: Array<Cocktail>;
-// }
-
 export class Cocktails {
     drinks: Array<Cocktail>;
 }
