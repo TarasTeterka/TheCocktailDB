@@ -1,4 +1,4 @@
-Final project It Academy Logos.Angular CLI.You can open the site at this link: https://tarasteterka.github.io/TheCocktailDB/
+Final project It Academy Logos.Angular CLI. You can open the site by clicking on the link: https://tarasteterka.github.io/TheCocktailDB/
 
 # TheCocktailDB
 
